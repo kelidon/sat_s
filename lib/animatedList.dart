@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'dart:async';
-import 'dart:io';
 import 'main.dart';
-////////////////////////////////////////////////////////////////////////
-///////////////////////LIST/////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-
-class Item {
-  Item({this.name, this.icon});
-  Icon icon;
-  String name;
-}
 
 class ListScreen extends StatefulWidget {
   @override
