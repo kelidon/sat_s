@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "748679327768",
+    "firebase_url": "https://satsproj.firebaseio.com",
+    "project_id": "satsproj",
+    "storage_bucket": "satsproj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748679327768:android:43cbf30591cc87c50d536d",
+        "android_client_info": {
+          "package_name": "com.project.sat_s"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748679327768-pv54giadl5okgl9a5i0jv6qa2p06bg8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRkwyC-dx-cJAQIxoMCthEXAAE7lLGCro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748679327768-pv54giadl5okgl9a5i0jv6qa2p06bg8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
