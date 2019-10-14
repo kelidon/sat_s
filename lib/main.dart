@@ -16,8 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'SatS',
+//      theme: ThemeData(
+//        primarySwatch: Colors.indigo,
+//      ),
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        brightness:Brightness.dark,
+        //primarySwatch: Colors.cyan,
       ),
       home: MyHomePage(title: 'SatS'),
     );
@@ -51,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    print(FloatingActionButton().backgroundColor.toString());
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -74,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blueAccent,
+        selectedItemColor: FloatingActionButton().backgroundColor,
         onTap: _onItemTapped,
       ),
 

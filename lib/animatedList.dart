@@ -68,29 +68,36 @@ class _ListScreenState extends State<ListScreen> {
       getData().then((val) {
         id = int.parse(val.documents[0].data['lastID'].toString());
       });
+      bool tapped = false;
+      var streamBuilder = new StreamBuilder(
+        stream: Firestore.instance.collection('satellites').snapshots(),
+        builder: (context, snapshot) {
+          if (!snapshot.hasData ) return const Text('Loading...');
+          listSize = snapshot.data.documents.length;
+          animatedList = new AnimatedList(
+            key: listKey,
+            initialItemCount: listSize,
+            itemBuilder: (context, index, animation) {
+              return
+                buildItem(
+                    context, snapshot.data.documents[index], index,
+                    animation);
+            },
+          );
+          return animatedList;
+        },
+      );
+      var textWidget = new Text('constructor');
+
       return Scaffold(
         body: Directionality(
             textDirection: TextDirection.ltr,
-            child: StreamBuilder(
-              stream: Firestore.instance.collection('satellites').snapshots(),
-              builder: (context, snapshot) {
-                if (!snapshot.hasData ) return const Text('Loading...');
-                listSize = snapshot.data.documents.length;
-                animatedList = new AnimatedList(
-                  key: listKey,
-                  initialItemCount: listSize,
-                  itemBuilder: (context, index, animation) {
-                    return
-                      buildItem(
-                          context, snapshot.data.documents[index], index,
-                          animation);
-                  },
-                );
-                return animatedList;
-              },
-            )),
+            child: tapped?textWidget:streamBuilder),
         floatingActionButton: FloatingActionButton(
-          onPressed: _addItem,
+          onPressed:
+//              (){tapped=!tapped;
+//              this.widget.},
+          _addItem,
           tooltip: 'Decrement',
           child: Icon(Icons.add),
         ),
