@@ -7,6 +7,6 @@ virtual nanosatellite.
 
 ## Info
 
-![image](https://user-images.githubusercontent.com/44965405/233846002-4663fe50-3c51-4c6f-bf00-a2667e5df438.png)
+![image](https://user-images.githubusercontent.com/44965405/233846288-6317ccfe-909f-45ed-a475-8ffcd1da1bd0.png)
 
 development stopped.
